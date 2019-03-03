@@ -46,12 +46,6 @@ class TileProblem(alg.Problem):
 
         for a in range(9):
             for b in range(9):
-                a_row = a / 3
-                a_col = a % 3
-
-                b_row = b / 3
-                b_col = b % 3
-                
                 result += self.manhattan_dist[(a, b)]
 
         return result
