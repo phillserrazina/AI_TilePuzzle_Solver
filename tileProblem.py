@@ -52,7 +52,7 @@ class TileProblem(alg.Problem):
                 b_row = b / 3
                 b_col = b % 3
                 
-                result += abs(a_row - b_row) + abs(a_col - b_col)
+                result += self.manhattan_dist[(a, b)]
 
         return result
 
@@ -87,6 +87,6 @@ initial = "7245_6831"
 goal = "12345678_"
 tile_board = TileProblem(initial, goal)
 #print(alg.uniform_cost_search(tile_board))
-#print(alg.greedy_best_first_graph_search(tile_board))
+print(alg.greedy_best_first_graph_search(tile_board))
 #print(alg.astar_search(tile_board))
 
