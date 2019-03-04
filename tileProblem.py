@@ -7,8 +7,6 @@ Goal State: 12345678_
 """
 
 import search_uniformcost_greedy_astar as alg
-from utils import distance
-infinity = float('inf')
 
 
 class TileProblem(alg.Problem):
@@ -28,7 +26,6 @@ class TileProblem(alg.Problem):
     def __init__(self, initial, goal):
         self.initial = initial
         self.goal = goal
-        self.explored = {}
         self.manhattan_dist = {}
 
         for a in range(9):
@@ -80,7 +77,7 @@ class TileProblem(alg.Problem):
 initial = "7245_6831"
 goal = "12345678_"
 tile_board = TileProblem(initial, goal)
-#print(alg.uniform_cost_search(tile_board))
-print(alg.greedy_best_first_graph_search(tile_board))
+print(alg.uniform_cost_search(tile_board))
+#print(alg.greedy_best_first_graph_search(tile_board))
 #print(alg.astar_search(tile_board))
 
